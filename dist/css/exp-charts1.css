@@ -1,0 +1,100 @@
+.axis {
+    font: 400 12px Arial;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.axis path, .axis line {
+    fill: none;
+    stroke: black;
+}
+
+.player.axis .bar {
+  fill: none;
+  stroke: #ddd;
+  stroke-width: 8px;
+  stroke-linecap: round;
+}
+
+.player.axis .domain {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .3;
+  stroke-width: 10px;
+  stroke-linecap: round;
+}
+
+.slider .handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: .5;
+  stroke-width: 1.25px;
+  cursor: pointer;
+}
+
+.slider .background {
+  cursor: auto !important;
+}
+
+.play-pause {
+  cursor: pointer;
+}
+
+.play-pause rect {
+  stroke: #000;
+  stroke-opacity: 0.3;
+  fill: #ddd;
+}
+
+.chart-line {
+    fill: none;
+    /*stroke: blue;*/
+    stroke-width: 2px;
+    clip-path: url('#clip');
+}
+
+.line-point {
+    /*fill: blue;*/
+    clip-path: url('#clip');
+}
+
+.guideline {
+    stroke: black;
+    stroke-width: 1px;
+    stroke-dasharray: 5,5;
+}
+
+.tick text {
+    font-size: 12px;
+}
+
+.tick line {
+    opacity: 0.2;
+}
+
+.tooltip {
+  font-family: Arial;
+}
+
+.tooltip rect{
+    fill: white;
+    opacity: 0.8;
+    /*stroke: blue;*/
+    stroke-width: 2;
+    stroke-opacity: 0.5;
+    rx: 5;
+    ry: 5;
+
+}
+
+.tooltip text.x-node {
+    font-size: 12px;
+    /*fill: blue;*/
+    opacity: 0.8;
+    margin-left: 20px;
+}
+
+.tooltip text.y-node {
+    font-size: 14px;
+}

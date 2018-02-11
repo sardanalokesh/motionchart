@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Test MotionChart</title>
+    <base href=''>
+    <link rel="stylesheet" href="../../dist/css/exp-charts1.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"/>
+</head>
+<body>
+    <div id="chartContainer1">
+        <svg></svg>
+    </div>
+    <script src="lib/js/moment.min.js"></script>
+    <script src="lib/js/d3.min.js"></script>
+    <script src="../../dist/js/ExpCharts.js"></script>
+    <script>
+        var chartOptions = {
+            height: 400,
+            width: 800,
+            xAxisLabelText: "Date",
+            yAxisLabelText: "Views"
+        };
+
+        var series = [];
+        var colors = ["#0000ff", "#ff0000"];
+
+        for (var i = 0; i < 2; i++) {
+            var data = generateRandomData("2016-05-25", 40);
+            series.push({
+                data: data,
+                color: colors[i]
+            });
+        }
+
+
+        var chart = new exp.charts.motionChart("#chartContainer1 svg", chartOptions, series);
+
+        function generateRandomData(startDate, numOfDays) {
+            var result = [];
+            var date = new moment(startDate);
+            var day, data;
+            for (day = 0; day < numOfDays; day++) {
+                var dayData = {};
+                dayData.x = new Date(date.format("YYYY-MM-DD"));
+                date.add(1, "days");
+                data = Math.round(10000000*Math.random());
+                dayData.y = data;
+                result.push(dayData);
+            }
+            return result;
+        }
+    </script>
+</body>
+</html>

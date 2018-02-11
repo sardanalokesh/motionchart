@@ -1,0 +1,39 @@
+{
+  "name": "exp-charts",
+  "version": "0.1.0",
+  "description": "Charts built on the top of D3JS",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "motionchart",
+    "d3js",
+    "charts"
+  ],
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "grunt": "~0.4.4",
+    "grunt-bower-concat": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "jshint-stylish": "latest"
+  },
+
+  "scripts": {
+    "prestart": "npm install",
+    "postinstall": "bower update",
+    "start": "grunt"
+  },
+
+  "author": "Lokesh Sardana",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "grunt": "^0.4.5"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "exp-charts",
+  "description": "Charts built on the top of D3JS",
+  "main": "server.js",
+  "authors": [
+    "Lokesh Sardana"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "motionchart",
+    "d3js",
+    "charts"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "^3.5.17",
+    "moment": "^2.13.0"
+  }
+}
